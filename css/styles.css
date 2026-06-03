@@ -245,3 +245,46 @@ FEATURES
   line-height: 1.5;
   color: var(--color-slate-600);
 }
+
+/* =============================
+RODAPÉ (FOOTER)
+============================= */
+.footer-circle {
+  position: relative;
+  z-index: 10; /* faz a bolinha ficar na frente da imagem */
+}
+
+.footer-container-text {
+  background-image:
+    linear-gradient(rgba(77, 150, 169, 0.9), rgba(77, 150, 169, 0.9)),
+    url("../assets/mobile/image-footer.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  margin-top: -1.75rem;
+  padding: var(--spacing-800) var(--spacing-400);
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--spacing-300);
+  width: 100%;
+}
+
+.footer-info h2 {
+  font-weight: var(--font-weight-black);
+  font-size: 2rem;
+  line-height: 1.1;
+  color: var(--color-white);
+}
+
+.footer-info p {
+  font-weight: var(--font-weight-medium);
+  font-size: var(--text-preset-3);
+  line-height: 1.5;
+  color: var(--color-white);
+}
