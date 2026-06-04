@@ -288,3 +288,87 @@ RODAPÉ (FOOTER)
   line-height: 1.5;
   color: var(--color-white);
 }
+
+/* =============================
+RESPONSIVIDADE (TABLET)
+============================= */
+@media (min-width: 768px) {
+  .hero {
+    padding: var(--spacing-800) 0 var(--spacing-800);
+  }
+  .hero-container {
+    gap: var(--spacing-900);
+  }
+
+  .hero-images img {
+    min-width: 108%;
+  }
+
+  .hero-text {
+    padding: 0;
+    margin-inline: auto;
+    max-width: 28.125rem;
+    width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 3rem;
+    max-width: 20rem;
+  }
+
+  .hero-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .features {
+    padding: var(--spacing-700) var(--spacing-400) var(--spacing-800);
+  }
+
+  .features-collage {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-300);
+    max-width: 42.5rem;
+    margin-inline: auto;
+  }
+
+  .features-collage img {
+    min-height: 160px;
+  }
+
+  .features-text {
+    max-width: 504px;
+    margin-inline: auto;
+  }
+
+  .features-titles {
+    max-width: 445px;
+    margin-inline: auto;
+  }
+
+  .features-titles span {
+    font-size: 0.875rem;
+  }
+
+  .features-titles h2 {
+    font-size: 2.25rem;
+  }
+
+  .footer-container-text {
+    background-image:
+      linear-gradient(rgba(77, 150, 169, 0.9), rgba(77, 150, 169, 0.9)),
+      url("../assets/tablet/image-footer.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .footer-info {
+    max-width: 504px;
+    margin-inline: auto;
+  }
+
+  .footer-info h2 {
+    font-size: 2.25rem;
+  }
+}
