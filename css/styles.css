@@ -149,6 +149,12 @@ HERO
   overflow: hidden;
 }
 
+/* esconder as imagens do desktop */
+.img-desktop-left,
+.img-desktop-right {
+  display: none;
+}
+
 .hero-images img {
   min-width: 115%;
   height: auto;
@@ -202,7 +208,6 @@ FEATURES
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   gap: var(--spacing-200);
-  max-width: 311px;
 }
 
 .features-collage img {
@@ -370,5 +375,150 @@ RESPONSIVIDADE (TABLET)
 
   .footer-info h2 {
     font-size: 2.25rem;
+  }
+}
+
+/* =============================
+RESPONSIVIDADE (DESKTOP)
+============================= */
+@media (min-width: 1200px) {
+  .header {
+    padding: var(--spacing-1000) var(--spacing-1000) 0;
+  }
+
+  .hero {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .hero-container {
+    display: block;
+    width: 100%;
+    max-width: 1440px;
+    margin-inline: auto;
+  }
+
+  /* div pai sume e as imagens viram colunas diretas */
+  .hero-images {
+    display: block;
+  }
+
+  .img-mobile-tablet {
+    display: none;
+  }
+
+  .hero-images .img-desktop-left {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -1.7rem;
+    min-width: auto;
+    max-width: 394px;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+  }
+
+  .hero-text {
+    padding-inline: 0;
+    max-width: 28rem;
+    width: 100%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-400);
+    position: relative;
+    z-index: 10; /* garante que o texto fique por cima de tudo */
+  }
+
+  .hero-text h1 {
+    font-size: var(--text-preset-1);
+    max-width: 100%;
+  }
+
+  .hero-text p {
+    font-size: var(--text-preset-4);
+  }
+
+  .hero-images .img-desktop-right {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -1.7rem;
+    min-width: auto;
+    max-width: 394px;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+  }
+
+  .features {
+    padding: var(--spacing-700) var(--spacing-1000) var(--spacing-900);
+  }
+
+  .features-collage {
+    width: 100%;
+    max-width: 1120px;
+  }
+
+  .features-text {
+    max-width: 544px;
+    gap: var(--spacing-400);
+  }
+
+  .features-titles span {
+    font-size: var(--text-preset-3);
+  }
+
+  .features-titles h2 {
+    font-size: var(--text-preset-2);
+  }
+
+  .features-text p {
+    font-size: var(--text-preset-4);
+  }
+
+  .footer-container-text {
+    background-image:
+      linear-gradient(rgba(77, 150, 169, 0.9), rgba(77, 150, 169, 0.9)),
+      url("../assets/desktop/image-footer.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: var(--spacing-1400) var(--spacing-1000);
+    width: 100%;
+  }
+
+  .footer-info {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1120px;
+    margin-inline: auto;
+    gap: var(--spacing-400);
+  }
+
+  .footer-info h2 {
+    font-size: var(--text-preset-2);
+    line-height: 1.1;
+    text-align: left;
+    max-width: 22rem;
+  }
+
+  .footer-info p {
+    font-size: var(--text-preset-4);
+    text-align: left;
+    max-width: 22.125rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .footer-info .btn {
+    flex-shrink: 0;
   }
 }
