@@ -1,0 +1,11 @@
+.header {
+  padding: var(--spacing-600) var(--spacing-1000) 0;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 1200px) {
+  .header {
+    padding-top: var(--spacing-1000);
+  }
+}

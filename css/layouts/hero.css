@@ -1,0 +1,142 @@
+.hero {
+  padding: var(--spacing-800) 0 var(--spacing-400);
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-600);
+}
+
+.hero-images {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.img-desktop-left,
+.img-desktop-right {
+  display: none;
+}
+
+.hero-images img {
+  min-width: 115%;
+  height: auto;
+}
+
+.hero-text {
+  padding-inline: 2.1875rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-300);
+}
+
+.hero-text h1 {
+  font-weight: var(--font-weight-black);
+  font-size: var(--mobile-text-preset-1);
+  line-height: 1.1;
+  color: var(--color-slate-900);
+  max-width: 18.125rem;
+  margin-inline: auto;
+}
+
+.hero-text p {
+  font-weight: var(--font-weight-medium);
+  line-height: 1.5;
+  color: var(--color-slate-600);
+}
+
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-200);
+}
+
+/* RESPONSIVIDADE (TABLET) */
+@media (min-width: 768px) {
+  .hero {
+    padding-bottom: var(--spacing-800);
+  }
+
+  .hero-container {
+    gap: var(--spacing-900);
+  }
+
+  .hero-images img {
+    min-width: 108%;
+  }
+
+  .hero-text {
+    padding: 0;
+    margin-inline: auto;
+    max-width: 28.125rem;
+  }
+
+  .hero-text h1 {
+    font-size: var(--tablet-text-preset-1);
+    max-width: 20rem;
+  }
+
+  .hero-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* RESPONSIVIDADE (DESKTOP) */
+@media (min-width: 1200px) {
+  .hero {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-container {
+    display: block;
+    max-width: 1440px;
+    margin-inline: auto;
+  }
+
+  .img-mobile-tablet {
+    display: none;
+  }
+
+  .hero-images .img-desktop-left,
+  .hero-images .img-desktop-right {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    min-width: auto;
+    max-width: 394px;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+  }
+
+  .hero-images .img-desktop-left {
+    left: -1.7rem;
+  }
+
+  .hero-images .img-desktop-right {
+    right: -1.7rem;
+  }
+
+  .hero-text {
+    max-width: 28rem;
+    margin-inline: auto;
+    gap: var(--spacing-400);
+    position: relative;
+    z-index: 10;
+  }
+
+  .hero-text h1 {
+    font-size: var(--desktop-text-preset-1);
+    max-width: 100%;
+  }
+
+  .hero-text p {
+    font-size: var(--desktop-text-preset-4);
+  }
+}

@@ -1,0 +1,41 @@
+.btn {
+  font-weight: var(--font-weight-black);
+  font-size: var(--desktop-text-preset-3);
+  line-height: 1.5;
+  color: var(--color-white);
+  border-radius: 1.8125rem;
+  padding: var(--spacing-200) var(--spacing-500);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--color-purple-300);
+  outline-offset: 4px;
+}
+
+.btn-cyan {
+  background-color: var(--color-cyan-600);
+  transition: background-color 0.3s ease-out;
+}
+
+.btn-cyan span {
+  color: var(--color-cyan-300);
+}
+
+.btn-cyan:hover {
+  background-color: #71c0d4;
+}
+
+.btn-purple {
+  background-color: var(--color-purple-600);
+  transition: background-color 0.3s ease-out;
+}
+
+.btn-purple span {
+  color: var(--color-purple-300);
+}
+
+.btn-purple:hover {
+  background-color: #b18bdd;
+}

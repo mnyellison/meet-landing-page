@@ -1,0 +1,120 @@
+.features {
+  padding: var(--spacing-400) var(--spacing-400) var(--spacing-800);
+}
+
+.features-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-800);
+}
+
+.features-collage {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  gap: var(--spacing-200);
+}
+
+.features-collage img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.features-text {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-400);
+}
+
+.features-titles {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-200);
+}
+
+.features-titles span {
+  font-weight: var(--font-weight-black);
+  font-size: var(--mobile-text-preset-3);
+  line-height: 1.1;
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+  color: var(--color-cyan-600);
+}
+
+.features-titles h2 {
+  font-weight: var(--font-weight-black);
+  font-size: var(--mobile-text-preset-2);
+  line-height: 1.1;
+  color: var(--color-slate-900);
+}
+
+.features-text p {
+  font-weight: var(--font-weight-medium);
+  font-size: var(--desktop-text-preset-3);
+  line-height: 1.5;
+  color: var(--color-slate-600);
+}
+
+/* RESPONSIVIDADE (TABLET) */
+@media (min-width: 768px) {
+  .features {
+    padding: var(--spacing-700) var(--spacing-400) var(--spacing-800);
+  }
+
+  .features-collage {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-300);
+    max-width: 42.5rem;
+    margin-inline: auto;
+  }
+
+  .features-collage img {
+    min-height: 160px;
+  }
+
+  .features-text {
+    max-width: 504px;
+    margin-inline: auto;
+  }
+
+  .features-titles {
+    max-width: 445px;
+    margin-inline: auto;
+  }
+
+  .features-titles span {
+    font-size: var(--tablet-text-preset-3);
+  }
+
+  .features-titles h2 {
+    font-size: var(--tablet-text-preset-2);
+  }
+}
+
+/* RESPONSIVIDADE (DESKTOP) */
+@media (min-width: 1200px) {
+  .features {
+    padding: var(--spacing-700) var(--spacing-1000) var(--spacing-900);
+  }
+
+  .features-collage {
+    max-width: 1120px;
+  }
+
+  .features-text {
+    max-width: 544px;
+  }
+
+  .features-titles span {
+    font-size: var(--desktop-text-preset-3);
+  }
+
+  .features-titles h2 {
+    font-size: var(--desktop-text-preset-2);
+  }
+
+  .features-text p {
+    font-size: var(--desktop-text-preset-4);
+  }
+}
