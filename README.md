@@ -1,101 +1,84 @@
-# Frontend Mentor - Meet landing page
+# Frontend Mentor - Meet landing page solution
 
-![Design preview for the Meet landing page coding challenge](./preview.jpg)
+This is a solution to the [Meet landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/meet-landing-page-rbTDS6OUR). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for purchasing this premium Frontend Mentor coding challenge.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [AI Collaboration](#ai-collaboration)
+- [Author](#author)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects. These premium challenges are perfect portfolio pieces, so please feel free to use what you create in your portfolio to show others.
+## Overview
 
-**To do this challenge, you need a decent understanding of HTML & CSS.**
+### The challenge
 
-## The challenge
-
-Your challenge is to build out this landing page and get it looking as close to the design as possible.
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-Your users should be able to:
+Users should be able to:
 
 - View the optimal layout depending on their device's screen size
 - See hover states for interactive elements
 
-### Want some support on the challenge?
+### Screenshot
 
-[Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+![](./assets/screenshot.jpg)
 
-## Where to find everything
+### Links
 
-Your task is to build out the project to the design file provided. You can download the Figma design file on the platform. You can download the design file on the platform. **Please be sure not to share them with anyone else.** The design download comes with a `README.md` file as well to help you get set up.
+- Solution URL: [Repository URL](https://github.com/mnyellison/meet-landing-page)
+- Live Site URL: [Live deployment URL](https://meet-landing-page-sigma-blue.vercel.app/)
 
-All the required assets for this project are in the `/assets` folder. The assets are already exported for the correct screen size and optimized. Some images are reusable at multiple screen sizes. So if you don't see an image in a specific folder, it will typically be in another folder for that page.
+## My process
 
-The design system in the design file will give you more information about the various colors, fonts, and styles used in this project.
+### Built with
 
-## Using AI coding assistants
+- Semantic HTML5 markup
+- CSS Custom Properties (Variables)
+- Flexbox
+- CSS Grid (with defensive minmax columns)
+- Mobile-first workflow
+- Clean Architecture (7-1 inspired modular CSS structure)
+- Advanced UX & Accessibility (a11y) practices
 
-We've included two files to help you if you're using AI coding assistants (like Claude, GitHub Copilot, Cursor, etc.) while working on this challenge:
+### What I learned
 
-- `AGENTS.md` - Contains detailed instructions for AI assistants on how to help you with this challenge. It's tailored to this challenge's difficulty level, so the AI will provide guidance appropriate to your learning stage—offering more support for beginner challenges and encouraging more independence on advanced ones.
-- `CLAUDE.md` - A pointer file that directs Claude-based tools to the AGENTS.md instructions.
+During this project, I advanced my frontend skills by tackling layout constraints, CSS specificity bugs, and code architecture. Here are the key takeaways:
 
-**How to use them:** You don't need to do anything! These files are automatically detected by most AI coding tools. The AI will read them and adjust its behavior to be a better learning partner—guiding you toward solutions rather than just giving you the answers.
+1. **Defensive CSS Grid:** I learned that standard fractional columns (`1fr`) have an implicit minimum width of `auto`. When viewport space is tight, this can crush centered text elements. I resolved this by applying explicit `minmax(0, 1fr)` boundaries on the flanking layout columns, protecting the central content structure.
 
-**Note:** These files are designed to help you *learn*, not to do the work for you. The AI is instructed to ask questions, give hints, and explain concepts rather than writing complete solutions.
+2. **CSS Specificity Overrides:** Ran into a debugging scenario where component class styles were ignored because of stronger compound selectors (`.parent img`) inherited from tablet media queries. I fixed this by using exact selector paths to boost specificity cleanly:
 
-## Building your project
+```css
+.hero-images .img-desktop-left,
+.hero-images .img-desktop-right {
+  min-width: auto;
+  max-width: 394px;
+}
+```
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+3. **Modular Folder Structure:** Transitioned from a single monolithic stylesheet to a production-grade modular structure, splitting files logically into base/, components/, and layouts/ directories using native CSS `@import` rules.
 
-1. Separate the `starter-code` from the rest of this project and rename it to something meaningful for you. Initialize the codebase as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/). **⚠️ IMPORTANT ⚠️: There are already a couple of `.gitignore` files in this project. Please do not remove them or change the content of the files. If you create a brand new project, please use the `.gitignore` files provided in your new codebase. This is to avoid the accidental upload of the design files to GitHub. With these premium challenges, please be sure not to share the design files in your GitHub repo. Thanks!**
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+### Continued development
 
-## Deploying your project
+For my future projects, I intend to focus on:
 
-As mentioned above, there are many ways to host your project for free. Our recommended hosts are:
+- Deeper integration of comprehensive web accessibility guidelines (WCAG).
+- Enhancing my fluency with advanced responsive layouts using fluid typography techniques (`clamp()`).
+- Automating CSS optimization workflows.
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+### AI Collaboration
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://www.frontendmentor.io/guides/hosting-your-solution).
+I collaborated with Gemini as an AI pair-programmer during this project.
 
-## Create a custom `README.md`
+- **How I used it:** We used the AI assistant for complex debugging sessions (inspecting DevTools behaviors when layout boundaries collapsed), brainstorming optimal desktop alignment techniques, and mapping out a modular CSS file architecture.
+- **What worked well:** The AI was highly effective at diagnosing CSS specificity clashes and explaining the underlying math of why layout components were getting crushed on specific viewports. It also helped translate high-level software design patterns into vanilla CSS modules.
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+## Author
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
-
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
-
-## Submitting your solution
-
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://www.frontendmentor.io/guides/how-to-submit-solutions) for tips on how to do this.
-
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
-
-**⚠️ IMPORTANT ⚠️: With these premium challenges, please be sure not to upload the design files to GitHub when you're submitting to the platform and sharing it around. If you've created a brand new project, the easiest way to do that is to copy across the `.gitignore` provided in this starter project.**
-
-## Sharing your solution
-
-There are multiple places you can share your solution:
-
-1. Share your solution page in the **#finished-projects** channel of the [community](https://www.frontendmentor.io/community). 
-2. Share on [X (formerly Twitter)](https://x.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in your post. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on [LinkedIn](https://www.linkedin.com/company/frontend-mentor/).
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
-
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
-
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
-
-## Got feedback for us?
-
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
-
-**Have fun building!** 🚀
+- Frontend Mentor - [@mnyellison](https://www.frontendmentor.io/profile/mnyellison)
+- GitHub - [Nyellison Matheus](https://github.com/mnyellison)
