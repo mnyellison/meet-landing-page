@@ -1,57 +1,47 @@
-# Frontend Mentor - Meet landing page solution
+# Frontend Mentor - Solução da Landing Page do Meet (Meet Landing Page)
 
-This is a solution to the [Meet landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/meet-landing-page-rbTDS6OUR). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+Esta é a minha solução para o desafio "Meet landing page" do Frontend Mentor. Os desafios do Frontend Mentor ajudam você a aprimorar suas habilidades de codificação construindo projetos realistas.
 
-## Table of contents
+## Visão Geral
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [AI Collaboration](#ai-collaboration)
-- [Author](#author)
+### O Desafio
 
-## Overview
+Os usuários devem ser capazes de:
+- Visualizar o layout ideal dependendo do tamanho da tela do dispositivo (responsividade completa).
+- Ver estados de hover (passar o mouse) para elementos interativos.
 
-### The challenge
-
-Users should be able to:
-
-- View the optimal layout depending on their device's screen size
-- See hover states for interactive elements
-
-### Screenshot
+### Captura de Tela
 
 ![](./assets/screenshot.jpg)
 
 ### Links
 
-- Solution URL: [Repository URL](https://github.com/mnyellison/meet-landing-page)
-- Live Site URL: [Live deployment URL](https://meet-landing-page-sigma-blue.vercel.app/)
+- **Código no GitHub:** [Visualizar Repositório](https://github.com/mnyellison/meet-landing-page)
+- **Site Online (Live Preview):** [Acessar Projeto](https://meet-landing-page-sigma-blue.vercel.app/)
 
-## My process
+---
 
-### Built with
+## Meu Processo
 
-- Semantic HTML5 markup
-- CSS Custom Properties (Variables)
+### Tecnologias Utilizadas
+
+- HTML5 Semântico
+- Variáveis CSS (Custom Properties)
 - Flexbox
-- CSS Grid (with defensive minmax columns)
-- Mobile-first workflow
-- Clean Architecture (7-1 inspired modular CSS structure)
-- Advanced UX & Accessibility (a11y) practices
+- CSS Grid (com colunas em formato de Grid Defensivo)
+- Fluxo de desenvolvimento Mobile-first
+- Arquitetura Limpa (estrutura CSS modular inspirada no padrão 7-1)
+- Práticas de Acessibilidade (a11y) e UX avançadas
 
-### What I learned
+---
 
-During this project, I advanced my frontend skills by tackling layout constraints, CSS specificity bugs, and code architecture. Here are the key takeaways:
+### O que eu aprendi neste projeto
 
-1. **Defensive CSS Grid:** I learned that standard fractional columns (`1fr`) have an implicit minimum width of `auto`. When viewport space is tight, this can crush centered text elements. I resolved this by applying explicit `minmax(0, 1fr)` boundaries on the flanking layout columns, protecting the central content structure.
+Durante este projeto, avancei bastante minhas habilidades de front-end ao lidar com restrições de layout, bugs de especificidade de CSS e arquitetura de código. Estes foram os principais aprendizados:
 
-2. **CSS Specificity Overrides:** Ran into a debugging scenario where component class styles were ignored because of stronger compound selectors (`.parent img`) inherited from tablet media queries. I fixed this by using exact selector paths to boost specificity cleanly:
+1. **CSS Grid Defensivo:** Aprendi que colunas fracionárias padrão (`1fr`) possuem uma largura mínima implícita de `auto`. Em viewports muito estreitos, isso pode esmagar os elementos de texto centralizados. Resolvi isso aplicando limites explícitos com `minmax(0, 1fr)` nas colunas laterais do layout, protegendo a estrutura do conteúdo central.
+
+2. **Sobrescrita de Especificidade CSS:** Enfrentei um cenário de depuração onde estilos de classe de componentes eram ignorados devido a seletores compostos mais fortes (`.parent img`) herdados de media queries do tablet. Corrigi isso utilizando caminhos de seletores exatos para aumentar a especificidade de forma limpa:
 
 ```css
 .hero-images .img-desktop-left,
@@ -61,24 +51,24 @@ During this project, I advanced my frontend skills by tackling layout constraint
 }
 ```
 
-3. **Modular Folder Structure:** Transitioned from a single monolithic stylesheet to a production-grade modular structure, splitting files logically into base/, components/, and layouts/ directories using native CSS `@import` rules.
+3. **Estrutura de Pastas Modular:** Fiz a transição de uma folha de estilo única e monolítica para uma estrutura modular de nível de produção, dividindo os arquivos de forma lógica em diretórios `base/`, `components/` e `layouts/` utilizando regras `@import` nativas do CSS.
 
-### Continued development
+### Próximos passos
 
-For my future projects, I intend to focus on:
+Para os meus futuros projetos, pretendo focar em:
 
-- Deeper integration of comprehensive web accessibility guidelines (WCAG).
-- Enhancing my fluency with advanced responsive layouts using fluid typography techniques (`clamp()`).
-- Automating CSS optimization workflows.
+- Integração mais profunda das diretrizes de acessibilidade na web (WCAG).
+- Aprimorar layouts responsivos avançados utilizando técnicas de tipografia fluida (`clamp()`).
+- Automatizar fluxos de trabalho e otimização de CSS.
 
-### AI Collaboration
+### Colaboração com IA (Gemini)
 
-I collaborated with Gemini as an AI pair-programmer during this project.
+Colaborei com o Gemini como um parceiro de pair programming durante este projeto.
 
-- **How I used it:** We used the AI assistant for complex debugging sessions (inspecting DevTools behaviors when layout boundaries collapsed), brainstorming optimal desktop alignment techniques, and mapping out a modular CSS file architecture.
-- **What worked well:** The AI was highly effective at diagnosing CSS specificity clashes and explaining the underlying math of why layout components were getting crushed on specific viewports. It also helped translate high-level software design patterns into vanilla CSS modules.
+- **Como utilizei:** Usamos a IA para sessões complexas de depuração (inspecionando comportamentos do DevTools quando os limites de layout quebravam), discutindo técnicas ideais de alinhamento em desktop e mapeando a arquitetura de arquivos CSS modulares.
+- **O que funcionou bem:** A IA foi extremamente eficaz para diagnosticar conflitos de especificidade de CSS e explicar a matemática por trás do esmagamento de componentes em viewports específicos. Também ajudou a traduzir padrões de design de software de alto nível para arquivos CSS modulares puros.
 
 ## Author
 
 - Frontend Mentor - [@mnyellison](https://www.frontendmentor.io/profile/mnyellison)
-- GitHub - [Nyellison Matheus](https://github.com/mnyellison)
+- GitHub - [@mnyellison](https://github.com/mnyellison)
